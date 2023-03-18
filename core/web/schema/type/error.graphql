@@ -1,0 +1,25 @@
+#enum ErrorCode {
+#	NOT_FOUND
+#	INVALID_INPUT
+#	UNPROCESSABLE
+#}
+
+interface Error {
+	message: String!
+	code: String!
+}
+
+type NotFoundError implements Error {
+    message: String!
+    code: String!
+}
+
+type InputError implements Error {
+	message: String!
+	code: String!
+	path: String!
+  }
+
+type InputErrors {
+	errors: [InputError!]!
+}

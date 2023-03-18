@@ -1,0 +1,16 @@
+scalar Time
+scalar Map
+scalar Bytes
+
+schema {
+    query: Query
+#    mutation: Mutation
+}
+
+type Query {
+    user(id: ID!): UserPayload!
+}
+
+#type Mutation {
+#    createUser(input: CreateUserInput!): CreateUserPayload!
+#}
